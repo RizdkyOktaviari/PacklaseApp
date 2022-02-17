@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_detail_bersih"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/detailBersihFragment">
+
+    <fragment
+        android:id="@+id/detailBersihFragment"
+        android:name="com.bangik.packclese.ui.detail.bersih.DetailBersihFragment"
+        android:label="fragment_detail_bersih"
+        tools:layout="@layout/fragment_detail_bersih" >
+
+        <action
+            android:id="@+id/action_detailBersihFragment_to_paymentBersihFragment"
+            app:destination="@id/paymentBersihFragment" />
+
+        <argument android:name="dataBersih"
+            app:argType="com.bangik.packclese.ui.detail.laundry.DataLaundry"
+            app:nullable="true"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/paymentBersihFragment"
+        android:name="com.bangik.packclese.ui.detail.bersih.PaymentBersihFragment"
+        android:label="fragment_payment_bersih"
+        tools:layout="@layout/fragment_payment_bersih" >
+        <action
+            android:id="@+id/action_paymentBersihFragment_to_paymentBersihSuccessFragment"
+            app:destination="@id/paymentBersihSuccessFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/paymentBersihSuccessFragment"
+        android:name="com.bangik.packclese.ui.detail.bersih.PaymentBersihSuccessFragment"
+        android:label="fragment_payment_bersih_success"
+        tools:layout="@layout/fragment_payment_bersih_success" />
+
+</navigation>

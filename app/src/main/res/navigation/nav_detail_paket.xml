@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_detail_paket"
+    app:startDestination="@id/detailPaketFragment">
+
+    <fragment
+        android:id="@+id/detailPaketFragment"
+        android:name="com.bangik.packclese.ui.detail.paket.DetailPaketFragment"
+        android:label="fragment_detail_paket"
+        tools:layout="@layout/fragment_detail_paket" >
+        <action
+            android:id="@+id/action_detailPaketFragment_to_paymentPaketFragment"
+            app:destination="@id/paymentPaketFragment" />
+
+        <argument android:name="dataPaket"
+            app:argType="com.bangik.packclese.ui.detail.paket.DataPaket"
+            app:nullable="true"/>
+    </fragment>
+    <fragment
+        android:id="@+id/paymentPaketFragment"
+        android:name="com.bangik.packclese.ui.detail.paket.PaymentPaketFragment"
+        android:label="fragment_payment_paket"
+        tools:layout="@layout/fragment_payment_paket" >
+        <action
+            android:id="@+id/action_paymentPaketFragment_to_paymentPaketSuccessFragment"
+            app:destination="@id/paymentPaketSuccessFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/paymentPaketSuccessFragment"
+        android:name="com.bangik.packclese.ui.detail.paket.PaymentPaketSuccessFragment"
+        android:label="fragment_payment_paket_success"
+        tools:layout="@layout/fragment_payment_paket_success" />
+</navigation>

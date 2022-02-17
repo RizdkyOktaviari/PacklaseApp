@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFF"
+    android:layout_marginTop="24dp"
+    android:paddingLeft="24dp"
+    android:paddingRight="24dp"
+    android:paddingTop="26dp"
+    android:orientation="vertical"
+    tools:context=".ui.profile.account.EditActivity">
+
+    <!-- TODO: Update blank fragment layout -->
+    <ImageView
+        android:id="@+id/EditProfil"
+        android:layout_gravity="center"
+        android:src="@drawable/ic_picture_empty"
+        android:layout_width="110dp"
+        android:layout_height="110dp"/>
+
+    <TextView
+        style="@style/TextView.PoppinsNormal16sp020202"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Username" />
+
+    <EditText
+        android:id="@+id/edt_username"
+        android:layout_marginTop="6dp"
+        android:padding="10dp"
+        style="@style/EditText.PoppinsNormal14sp8D92A3"
+        android:background="@drawable/shape_rectangle_outline_8_020202"
+        android:hint="Type your Username"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        style="@style/TextView.PoppinsNormal16sp020202"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Email" />
+
+    <EditText
+        android:id="@+id/edt_email"
+        android:inputType="textEmailAddress"
+        android:layout_marginTop="6dp"
+        android:padding="10dp"
+        style="@style/EditText.PoppinsNormal14sp8D92A3"
+        android:background="@drawable/shape_rectangle_outline_8_020202"
+        android:hint="Type your Email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <TextView
+        style="@style/TextView.PoppinsNormal16sp020202"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Phone Number" />
+
+    <EditText
+        android:id="@+id/edt_phoneNumber"
+        android:inputType="phone"
+        android:layout_marginTop="6dp"
+        android:padding="10dp"
+        style="@style/EditText.PoppinsNormal14sp8D92A3"
+        android:background="@drawable/shape_rectangle_outline_8_020202"
+        android:hint="Type your Phone Number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        style="@style/TextView.PoppinsNormal16sp020202"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Address" />
+
+    <EditText
+        android:id="@+id/edt_address"
+        android:layout_marginTop="6dp"
+        android:padding="10dp"
+        style="@style/EditText.PoppinsNormal14sp8D92A3"
+        android:background="@drawable/shape_rectangle_outline_8_020202"
+        android:hint="Type your Address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:id="@+id/btnEditProfile"
+        style="@style/Button.Primary"
+        android:textAllCaps="false"
+        android:layout_marginTop="24dp"
+        android:text="Simpan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>

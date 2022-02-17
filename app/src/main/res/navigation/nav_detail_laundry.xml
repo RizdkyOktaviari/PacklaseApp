@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/fragmentDetailLaundry"
+    android:id="@+id/nav_detail_laundry">
+
+    <fragment android:id="@+id/fragmentDetailLaundry"
+        android:name="com.bangik.packclese.ui.detail.laundry.DetailLaundryFragment"
+        tools:layout= "@layout/fragment_detail_laundry">
+
+        <action android:id="@+id/action_payment_laundry"
+            app:destination="@id/fragmentPaymentLaundry"/>
+
+        <argument android:name="data"
+            app:argType="com.bangik.packclese.ui.detail.laundry.DataLaundry"
+            app:nullable="true"/>
+    </fragment>
+
+    <fragment android:id="@+id/fragmentPaymentLaundry"
+        android:name="com.bangik.packclese.ui.detail.laundry.PaymentLaundryFragment"
+        tools:layout= "@layout/fragment_payment_laundry">
+
+        <action
+            android:id="@+id/action_fragmentPaymentLaundry_to_fragmentPaymentSuccess"
+            app:destination="@id/fragmentPaymentLaundrySuccess" />
+    </fragment>
+
+    <fragment android:id="@+id/fragmentPaymentLaundrySuccess"
+        android:name="com.bangik.packclese.ui.detail.laundry.PaymentLaundrySuccessFragment"
+        tools:layout= "@layout/fragment_payment_laundry_success">
+
+    </fragment>
+
+</navigation>
